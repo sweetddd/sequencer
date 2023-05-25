@@ -198,6 +198,8 @@ cosmossdk.io/math v1.0.0-beta.6/go.mod h1:gUVtWwIzfSXqcOT+lBVz2jyjfua8DoBdzRsIya
 dmitri.shuralyov.com/gpu/mtl v0.0.0-20190408044501-666a987793e9/go.mod h1:H6x//7gZCb22OMCxBHrMx7a5I7Hp++hsVxbQ4BYO7hU=
 filippo.io/edwards25519 v1.0.0-rc.1 h1:m0VOOB23frXZvAOK44usCgLWvtsxIoMCTBGJZlpmGfU=
 filippo.io/edwards25519 v1.0.0-rc.1/go.mod h1:N1IkdkCkiLB6tki+MYJoSx2JTY9NUlxZE7eHn5EwJns=
+git.everylink.ai/crosschain/go-ethereum v0.0.0-20230505075655-ba1003325eda h1:CGMNoMnWkSsWgneCSXBX3QdSQUtWGzVz3yh9BgxrOek=
+git.everylink.ai/crosschain/go-ethereum v0.0.0-20230505075655-ba1003325eda/go.mod h1:EYFyF19u3ezGLD4RqOkLq+ZCXzYbLoNDdZlMt7kyKFg=
 git.sr.ht/~sircmpwn/getopt v0.0.0-20191230200459-23622cc906b3/go.mod h1:wMEGFFFNuPos7vHmWXfszqImLppbc0wEhh6JBfJIUgw=
 git.sr.ht/~sircmpwn/go-bare v0.0.0-20210406120253-ab86bc2846d9/go.mod h1:BVJwbDfVjCjoFiKrhkei6NdGcZYpkDkdyCdg1ukytRA=
 github.com/99designs/go-keychain v0.0.0-20191008050251-8e49817e8af4 h1:/vQbFIOMbk2FiG/kXiLl8BRyzTWDw7gX/Hz7Dd5eDMs=
@@ -477,8 +479,6 @@ github.com/evmos/cosmos-sdk v0.46.10-ledger.1 h1:b5u/DKYfgpx+PmOFLhP46sH55EDRhj6
 github.com/evmos/cosmos-sdk v0.46.10-ledger.1/go.mod h1:opDBTPiPrOo781a1zT1Tadh2Runcm5Ko/KXI1hZCzRo=
 github.com/evmos/evmos-ledger-go v0.3.0-rc0 h1:QbfTCOxAxvaHbdwmkEPewr0BwWy9hnQEc6kXZ6gij/I=
 github.com/evmos/evmos-ledger-go v0.3.0-rc0/go.mod h1:w2llvjRGkc7u/S1FQfznebxAwrc+wCOIqXcDFUWVkKQ=
-github.com/evmos/go-ethereum v1.10.26 h1:7wlczxUWTwhzJJUyh3Kkqt3/5fdSJzh8c42boc9GuII=
-github.com/evmos/go-ethereum v1.10.26/go.mod h1:EYFyF19u3ezGLD4RqOkLq+ZCXzYbLoNDdZlMt7kyKFg=
 github.com/facebookgo/ensure v0.0.0-20200202191622-63f1cf65ac4c h1:8ISkoahWXwZR41ois5lSJBSVw4D0OV19Ht/JSTzvSv0=
 github.com/facebookgo/stack v0.0.0-20160209184415-751773369052 h1:JWuenKqqX8nojtoVVWjGfOF9635RETekkoH6Cc9SX0A=
 github.com/facebookgo/subset v0.0.0-20200203212716-c811ad88dec4 h1:7HZCaLC5+BZpmbhCOZJ293Lz68O7PYrF2EzeiFMwCLk=
