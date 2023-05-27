@@ -8,9 +8,9 @@ sequencerd init node0 --chain-id testnet_9000-1 --home data/node0
 sequencerd init node1 --chain-id testnet_9000-1 --home data/node1
 sequencerd init node2 --chain-id testnet_9000-1 --home data/node2
 
-sequencerd keys add dev0
-sequencerd keys add dev1
-sequencerd keys add dev2
+#sequencerd keys add dev0
+#sequencerd keys add dev1
+#sequencerd keys add dev2
 
 
 jq '.app_state["staking"]["params"]["bond_denom"]="aseq"' data/node0/config/genesis.json >data/node0/config/tmp_genesis.json && mv data/node0/config/tmp_genesis.json data/node0/config/genesis.json

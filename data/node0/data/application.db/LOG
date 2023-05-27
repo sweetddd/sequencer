@@ -1,20 +1,16 @@
 =============== May 27, 2023 (CST) ===============
-15:42:16.815267 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-15:42:16.869923 db@open opening
-15:42:16.871141 version@stat F·[] S·0B[] Sc·[]
-15:42:16.890005 db@janitor F·2 G·0
-15:42:16.890034 db@open done T·20.085292ms
-15:44:17.391142 db@close closing
-15:44:17.391214 db@close done T·69.541µs
+18:01:03.778919 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+18:01:03.836621 db@open opening
+18:01:03.838131 version@stat F·[] S·0B[] Sc·[]
+18:01:03.855701 db@janitor F·2 G·0
+18:01:03.856001 db@open done T·19.343083ms
 =============== May 27, 2023 (CST) ===============
-16:33:46.835577 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-16:33:46.836131 version@stat F·[] S·0B[] Sc·[]
-16:33:46.836142 db@open opening
-16:33:46.836184 journal@recovery F·1
-16:33:46.836324 journal@recovery recovering @1
-16:33:46.854758 memdb@flush created L0@2 N·25 S·565B "s/k..ion,v16":"s/k..ion,v22"
-16:33:46.855296 version@stat F·[1] S·565B[565B] Sc·[0.25]
-16:33:46.943300 db@janitor F·3 G·0
-16:33:46.943357 db@open done T·107.211791ms
-17:03:14.760874 db@close closing
-17:03:14.760902 db@close done T·28µs
+18:13:20.823686 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+18:13:20.824488 version@stat F·[] S·0B[] Sc·[]
+18:13:20.824506 db@open opening
+18:13:20.824553 journal@recovery F·1
+18:13:20.824827 journal@recovery recovering @1
+18:13:20.844092 memdb@flush created L0@2 N·25 S·565B "s/k..ion,v22":"s/k..ion,v10"
+18:13:20.844268 version@stat F·[1] S·565B[565B] Sc·[0.25]
+18:13:20.956493 db@janitor F·3 G·0
+18:13:20.956554 db@open done T·132.039084ms

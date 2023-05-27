@@ -1,23 +1,30 @@
-FROM golang:1.20.2-bullseye AS build-env
+FROM golang:1.20.2
+ENV PACKAGES jq curl wget jq file make git
 
-WORKDIR /go/src/github.com/evmos/evmos
 
-RUN apt-get update -y
-RUN apt-get install git -y
-
+WORKDIR /apps
 COPY . .
+#RUN apt-get update
+#RUN  apt install -y apt-transport-https ca-certificates
+#RUN cp sources.list /etc/apt/sources.list
+#RUN apt-get install -y jq
+#RUN apt-get install -y  curl   make git
+RUN ls -a
+RUN go version
+RUN go env -w GOPROXY=https://goproxy.cn,direct
+#RUN go mod tidy
+RUN make install
+RUN  #apt-get install nginx -y
+RUN #sh init.sh
+RUN mkdir ~/.sequncerd
+WORKDIR /apps/data
+RUN ls -a
+WORKDIR /apps
+COPY data/ /root/.sequncerd/
+WORKDIR /root/.sequncerd/
+RUN ls -a
 
-RUN make build
-
-FROM golang:1.20.2-bullseye
-
-RUN apt-get update -y
-RUN apt-get install ca-certificates jq -y
-
-WORKDIR /root
-
-COPY --from=build-env /go/src/github.com/evmos/evmos/build/evmosd /usr/bin/evmosd
-
-EXPOSE 26656 26657 1317 9090 8545 8546
-
-CMD ["evmosd"]
+#RUN ./target/release/dtx-chain build-spec --disable-default-bootnode --chain local > customSpec.json
+#RUN ./target/release/dtx-chain build-spec --chain=customSpec.json --raw --disable-default-bootnode > config/customSpecRaw.json
+#COPY nginx/nginx.conf /etc/nginx/nginx.conf
+#EXPOSE 9900

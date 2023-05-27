@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: $APP_NAME
+  namespace: chain-sandbox
+spec:
+  replicas: 3
+  serviceName: $APP_NAME
+  selector:
+    matchLabels:
+      app: $APP_NAME
+  template:
+    metadata:
+      labels:
+        app: $APP_NAME
+    spec:
+      containers:
+      - name: $APP_NAME
+        command: [ "/bin/sh","-c","cp -R  /root/.sequencer/$(hostname)/*  /data/blocks/zkevm/demo/;
+        if [ $(hostname) = 'zkevm-sequencer-0' ]; then
+           sequencerd start  --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable true --minimum-gas-prices 0.0001aseq  --home /data/blocks/zkevm/demo
+        else
+           sequencerd start  --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable true --minimum-gas-prices 0.0001aseq  --home /data/blocks/zkevm/demo --p2p.seeds 57941156fdf5633c2e7c370f042235b6b387538f@zkevm-sequencer-0.zkevm-sequencer-sandbox.chain-sandbox.svc.cluster.local:26656
+        fi" ]
+        args: [ ""]
+        image:  $REGISTRY/$APP_NAME:SNAPSHOT-$BUILD_NUMBER
+        resources:
+          requests:
+            cpu: 1
+            memory: 2Gi
+          limits:
+            cpu: 2
+            memory: 4Gi
+        volumeMounts:
+          - name: data
+            mountPath: /data/blocks
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 1317
+          - containerPort: 8545
+          - containerPort: 26657
+          - containerPort: 26656
+        env:
+          - name: TZ
+            value: GMT
+      imagePullSecrets:
+      - name: regcred
+      restartPolicy: Always
+      dnsPolicy: ClusterFirst
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: app
+                    operator: In
+                    values:
+                      - $APP_NAME
+              topologyKey: "kubernetes.io/hostname"
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes: [ "ReadWriteMany" ]
+        storageClassName: "mvmchain-local-storage"
+        resources:
+          requests:
+            storage: 10Gi
