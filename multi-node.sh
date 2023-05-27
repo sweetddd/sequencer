@@ -29,7 +29,7 @@ cat data/node2/config/genesis.json | jq '.app_state["evm"]["params"]["evm_denom"
 cat data/node2/config/genesis.json | jq '.app_state["staking"]["params"]["bond_denom"]="aseq"' > data/node2/config/tmp_genesis.json && mv data/node2/config/tmp_genesis.json data/node2/config/genesis.json
 cat data/node2/config/genesis.json | jq '.app_state["crisis"]["constant_fee"]["denom"]="aseq"' > data/node2/config/tmp_genesis.json && mv data/node2/config/tmp_genesis.json data/node2/config/genesis.json
 cat data/node2/config/genesis.json | jq '.app_state["gov"]["deposit_params"]["min_deposit"][0]["denom"]="aseq"' > data/node2/config/tmp_genesis.json && mv data/node2/config/tmp_genesis.json data/node2/config/genesis.json
-cat data/node2/config/genesis.json | jq '.app_state["mint"]["params"]["mint_denom"]="aseq"' > data/node2/config/tmp_genesis.json && mv data/node2/config/tmp_genesis.json data/node2/config/genesis.json
+cat data/node2/config/genesis.json | jq '.app_state["inflation"]["params"]["mint_denom"]="aseq"' > data/node2/config/tmp_genesis.json && mv data/node2/config/tmp_genesis.json data/node2/config/genesis.json
 
 
 
@@ -57,6 +57,6 @@ sequencerd collect-gentxs --home data/node2
 #TRACE=""
 #
 ## Start the node (remove the --pruning=nothing flag if historical queries are not needed)
-sequencerd start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001aseq --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home data/node0
-sequencerd start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001aseq --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home data/node1
-sequencerd start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001aseq --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home data/node2
+#sequencerd start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001aseq --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home data/node0
+#sequencerd start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001aseq --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home data/node1
+#sequencerd start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001aseq --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home data/node2
