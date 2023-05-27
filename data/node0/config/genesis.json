@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2023-05-27T00:57:10.754933Z",
+  "genesis_time": "2023-05-27T07:35:48.853868Z",
   "chain_id": "testnet_9000-1",
   "initial_height": "1",
   "consensus_params": {
@@ -34,7 +34,27 @@
         {
           "@type": "/ethermint.types.v1.EthAccount",
           "base_account": {
-            "address": "evmos1u323yaceyqf6r6wrf5pclldc5mlm8l5zp35r6j",
+            "address": "evmos1wqk5hxyn0eq863ff05hvc2hktagggpgr38uxy7",
+            "pub_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          },
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+        },
+        {
+          "@type": "/ethermint.types.v1.EthAccount",
+          "base_account": {
+            "address": "evmos1qa4tl9tdv9g9yfgzzv7q5fx9kk40atx22qq7zh",
+            "pub_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          },
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+        },
+        {
+          "@type": "/ethermint.types.v1.EthAccount",
+          "base_account": {
+            "address": "evmos1h9ad6y3usp2sflm524c96w546k6atvg79zylx9",
             "pub_key": null,
             "account_number": "0",
             "sequence": "0"
@@ -53,11 +73,29 @@
       },
       "balances": [
         {
-          "address": "evmos1u323yaceyqf6r6wrf5pclldc5mlm8l5zp35r6j",
+          "address": "evmos1qa4tl9tdv9g9yfgzzv7q5fx9kk40atx22qq7zh",
           "coins": [
             {
               "denom": "aseq",
-              "amount": "100000000000000000000"
+              "amount": "100000000000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "evmos1wqk5hxyn0eq863ff05hvc2hktagggpgr38uxy7",
+          "coins": [
+            {
+              "denom": "aseq",
+              "amount": "100000000000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "evmos1h9ad6y3usp2sflm524c96w546k6atvg79zylx9",
+          "coins": [
+            {
+              "denom": "aseq",
+              "amount": "100000000000000000000000000"
             }
           ]
         }
@@ -65,7 +103,7 @@
       "supply": [
         {
           "denom": "aseq",
-          "amount": "100000000000000000000"
+          "amount": "300000000000000000000000000"
         }
       ],
       "denom_metadata": []
@@ -214,19 +252,19 @@
                   "max_change_rate": "0.010000000000000000"
                 },
                 "min_self_delegation": "1",
-                "delegator_address": "evmos1u323yaceyqf6r6wrf5pclldc5mlm8l5zp35r6j",
-                "validator_address": "evmosvaloper1u323yaceyqf6r6wrf5pclldc5mlm8l5zvlmnm0",
+                "delegator_address": "evmos1wqk5hxyn0eq863ff05hvc2hktagggpgr38uxy7",
+                "validator_address": "evmosvaloper1wqk5hxyn0eq863ff05hvc2hktagggpgrufnk9r",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "mFop8M+2kLMFQm0bPx5Mk/ggU2GVD2VKm50GGBIuhBs="
+                  "key": "PuSOM12rjdu76pJ4bu9Jk7gXMKky8hTn5lJ4FNGGdAg="
                 },
                 "value": {
                   "denom": "aseq",
-                  "amount": "100000000000000000000"
+                  "amount": "1000000000000000000000"
                 }
               }
             ],
-            "memo": "028a69b597379ba76e5c6b13f5b2b17f8c25f9b5@192.168.10.203:26656",
+            "memo": "470720e8078f2f234edba70c7eb7f0ad7ca87a18@192.168.10.203:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -236,7 +274,7 @@
               {
                 "public_key": {
                   "@type": "/ethermint.crypto.v1.ethsecp256k1.PubKey",
-                  "key": "AuuM3aRvhbimEqUmGAt2BDW2Pz41WaLb/QEMBgnT6zRG"
+                  "key": "A2zXAsDdBKRPYyS8W+KxRJxhPC0CeVL7APAdsrX5VcY1"
                 },
                 "mode_info": {
                   "single": {
@@ -255,7 +293,7 @@
             "tip": null
           },
           "signatures": [
-            "UDO1XeZTEoG4iYkO9pCulWc+qjH/YK1olG3xiUSs1qg5FkaFgNTN+ylFe4q+HhTBR3PkjPLDn+Hp9o5nAVCWxAA="
+            "7RkXArSMQ+EYZGzugIy+0UwkwF+FTB9IcC4hRQUp72tjaxYoszrSPWicwADlepHj0wqgZnLkTXtgQJwgqcx/HQA="
           ]
         }
       ]
