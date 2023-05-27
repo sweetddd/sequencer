@@ -1,26 +1,18 @@
 =============== May 27, 2023 (CST) ===============
-18:06:13.018018 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-18:06:13.074888 db@open opening
-18:06:13.075151 version@stat F·[] S·0B[] Sc·[]
-18:06:13.092872 db@janitor F·2 G·0
-18:06:13.092910 db@open done T·17.994459ms
+23:17:03.638445 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+23:17:03.711844 db@open opening
+23:17:03.712137 version@stat F·[] S·0B[] Sc·[]
+23:17:03.730917 db@janitor F·2 G·0
+23:17:03.730954 db@open done T·19.081916ms
+23:17:03.923426 db@close closing
+23:17:03.923452 db@close done T·26.208µs
 =============== May 27, 2023 (CST) ===============
-18:13:58.613723 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-18:13:58.614234 version@stat F·[] S·0B[] Sc·[]
-18:13:58.614255 db@open opening
-18:13:58.614300 journal@recovery F·1
-18:13:58.614369 journal@recovery recovering @1
-18:13:58.633556 memdb@flush created L0@2 N·5 S·5KiB "con..y:1,v4":"val..y:2,v3"
-18:13:58.633908 version@stat F·[1] S·5KiB[5KiB] Sc·[0.25]
-18:13:58.727700 db@janitor F·3 G·0
-18:13:58.727731 db@open done T·113.466542ms
-=============== May 27, 2023 (CST) ===============
-18:17:51.050022 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-18:17:51.050492 version@stat F·[1] S·5KiB[5KiB] Sc·[0.25]
-18:17:51.050507 db@open opening
-18:17:51.050541 journal@recovery F·1
-18:17:51.050611 journal@recovery recovering @3
-18:17:51.070398 memdb@flush created L0@5 N·4 S·605B "con..y:1,v9":"val..y:2,v8"
-18:17:51.070646 version@stat F·[2] S·5KiB[5KiB] Sc·[0.50]
-18:17:51.169492 db@janitor F·4 G·0
-18:17:51.169513 db@open done T·118.999125ms
+23:17:33.661337 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+23:17:33.661925 version@stat F·[] S·0B[] Sc·[]
+23:17:33.661937 db@open opening
+23:17:33.661973 journal@recovery F·1
+23:17:33.662038 journal@recovery recovering @1
+23:17:33.681098 memdb@flush created L0@2 N·5 S·5KiB "con..y:1,v4":"val..y:2,v3"
+23:17:33.681228 version@stat F·[1] S·5KiB[5KiB] Sc·[0.25]
+23:17:33.754277 db@janitor F·3 G·0
+23:17:33.754354 db@open done T·92.409708ms

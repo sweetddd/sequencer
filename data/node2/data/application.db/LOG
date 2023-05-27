@@ -1,25 +1,18 @@
 =============== May 27, 2023 (CST) ===============
-18:06:12.766496 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-18:06:12.822775 db@open opening
-18:06:12.823083 version@stat F·[] S·0B[] Sc·[]
-18:06:12.840850 db@janitor F·2 G·0
-18:06:12.840902 db@open done T·18.073416ms
+23:17:03.333602 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+23:17:03.389777 db@open opening
+23:17:03.389978 version@stat F·[] S·0B[] Sc·[]
+23:17:03.407965 db@janitor F·2 G·0
+23:17:03.407987 db@open done T·18.1885ms
+23:17:03.923470 db@close closing
+23:17:03.923513 db@close done T·42.875µs
 =============== May 27, 2023 (CST) ===============
-18:13:58.290489 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-18:13:58.290996 version@stat F·[] S·0B[] Sc·[]
-18:13:58.291008 db@open opening
-18:13:58.291043 journal@recovery F·1
-18:13:58.291111 journal@recovery recovering @1
-18:13:58.328185 memdb@flush created L0@2 N·25 S·565B "s/k..ion,v11":"s/k..ion,v7"
-18:13:58.328432 version@stat F·[1] S·565B[565B] Sc·[0.25]
-18:13:58.421477 db@janitor F·3 G·0
-18:13:58.421515 db@open done T·130.497084ms
-=============== May 27, 2023 (CST) ===============
-18:17:50.807972 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-18:17:50.808524 version@stat F·[1] S·565B[565B] Sc·[0.25]
-18:17:50.808542 db@open opening
-18:17:50.808583 journal@recovery F·1
-18:17:50.808639 journal@recovery recovering @3
-18:17:50.808941 version@stat F·[1] S·565B[565B] Sc·[0.25]
-18:17:50.866676 db@janitor F·3 G·0
-18:17:50.866704 db@open done T·58.151542ms
+23:17:33.406966 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+23:17:33.407095 version@stat F·[] S·0B[] Sc·[]
+23:17:33.407115 db@open opening
+23:17:33.407150 journal@recovery F·1
+23:17:33.407212 journal@recovery recovering @1
+23:17:33.425257 memdb@flush created L0@2 N·25 S·565B "s/k..ion,v25":"s/k..ion,v12"
+23:17:33.425454 version@stat F·[1] S·565B[565B] Sc·[0.25]
+23:17:33.502404 db@janitor F·3 G·0
+23:17:33.502544 db@open done T·95.421458ms
