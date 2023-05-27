@@ -16,9 +16,9 @@ RUN go env -w GOPROXY=https://goproxy.cn,direct
 env GO111MODULE=on
 RUN go env -w GOPRIVATE="git.everylink.ai"
 RUN go env -w GOINSECURE=git.everylink.ai/crosschain
-RUN git config --global url."http://git.everylink.ai/".insteadof "https://git.everylink.ai/"
+RUN #git config --global url."http://git.everylink.ai/".insteadof "https://git.everylink.ai/"
 
-RUN #go get git.everylink.ai/crosschain/go-ethereum
+RUN go get git.everylink.ai/public/go-ethereum
 RUN make install
 RUN  #apt-get install nginx -y
 RUN #sh init.sh
