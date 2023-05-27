@@ -15,7 +15,7 @@ RUN go env -w GOPROXY=https://goproxy.cn,direct
 #RUN go mod tidy
 env GO111MODULE=on
 RUN go env -w GOPRIVATE="git.everylink.ai"
-RUN go env -w GOINSECURE=git.everylink.ai/crosschain
+RUN go env -w GOINSECURE=git.everylink.ai/public
 RUN #git config --global url."http://git.everylink.ai/".insteadof "https://git.everylink.ai/"
 
 RUN go get git.everylink.ai/public/go-ethereum
