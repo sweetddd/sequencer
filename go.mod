@@ -225,7 +225,7 @@ replace (
 	//github.com/ethereum/go-ethereum => github.com/evmos/go-ethereum v1.10.26
 
 	// use layer2 geth master fork
-	github.com/ethereum/go-ethereum => git.everylink.ai/crosschain/go-ethereum v0.0.0-20230505075655-ba1003325eda
+	github.com/ethereum/go-ethereum => git.everylink.ai/public/go-ethereum v0.0.0-20230505075655-ba1003325eda
 
 	// Security Advisory https://github.com/advisories/GHSA-h395-qcrw-5vmq
 	github.com/gin-gonic/gin => github.com/gin-gonic/gin v1.7.7
