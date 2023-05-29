@@ -198,8 +198,8 @@ cosmossdk.io/math v1.0.0-beta.6/go.mod h1:gUVtWwIzfSXqcOT+lBVz2jyjfua8DoBdzRsIya
 dmitri.shuralyov.com/gpu/mtl v0.0.0-20190408044501-666a987793e9/go.mod h1:H6x//7gZCb22OMCxBHrMx7a5I7Hp++hsVxbQ4BYO7hU=
 filippo.io/edwards25519 v1.0.0-rc.1 h1:m0VOOB23frXZvAOK44usCgLWvtsxIoMCTBGJZlpmGfU=
 filippo.io/edwards25519 v1.0.0-rc.1/go.mod h1:N1IkdkCkiLB6tki+MYJoSx2JTY9NUlxZE7eHn5EwJns=
-git.everylink.ai/public/go-ethereum v0.0.0-20230505075655-ba1003325eda h1:CGMNoMnWkSsWgneCSXBX3QdSQUtWGzVz3yh9BgxrOek=
-git.everylink.ai/public/go-ethereum v0.0.0-20230505075655-ba1003325eda/go.mod h1:EYFyF19u3ezGLD4RqOkLq+ZCXzYbLoNDdZlMt7kyKFg=
+git.everylink.ai/public/go-ethereum v0.0.0-20230527141948-3ce68a2874db h1:0MOJOx/ewfFgkmPOKWFEpSYrE6WLHua0A8yfitoxkgY=
+git.everylink.ai/public/go-ethereum v0.0.0-20230527141948-3ce68a2874db/go.mod h1:EYFyF19u3ezGLD4RqOkLq+ZCXzYbLoNDdZlMt7kyKFg=
 git.sr.ht/~sircmpwn/getopt v0.0.0-20191230200459-23622cc906b3/go.mod h1:wMEGFFFNuPos7vHmWXfszqImLppbc0wEhh6JBfJIUgw=
 git.sr.ht/~sircmpwn/go-bare v0.0.0-20210406120253-ab86bc2846d9/go.mod h1:BVJwbDfVjCjoFiKrhkei6NdGcZYpkDkdyCdg1ukytRA=
 github.com/99designs/go-keychain v0.0.0-20191008050251-8e49817e8af4 h1:/vQbFIOMbk2FiG/kXiLl8BRyzTWDw7gX/Hz7Dd5eDMs=
