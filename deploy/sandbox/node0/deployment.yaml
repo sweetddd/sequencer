@@ -57,12 +57,12 @@ spec:
                     values:
                       - $APP_NAME
               topologyKey: "kubernetes.io/hostname"
-  volumeClaimTemplates:
-    - metadata:
-        name: data
-      spec:
-        accessModes: [ "ReadWriteMany" ]
-        storageClassName: "mvmchain-local-storage"
-        resources:
-          requests:
-            storage: 10Gi
+#  volumeClaimTemplates:
+#    - metadata:
+#        name: data
+#      spec:
+#        accessModes: [ "ReadWriteMany" ]
+#        storageClassName: "mvmchain-local-storage"
+#        resources:
+#          requests:
+#            storage: 10Gi
