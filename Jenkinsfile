@@ -44,8 +44,8 @@ pipeline {
                                      credentialsId: 'kubeconfig',
                                      variable: 'KUBECONFIG')
                                      ]) {
-                                     sh 'envsubst < deploy/prover/sandbox/deployment.yaml | kubectl apply -f -'
-                                     sh 'envsubst < deploy/prover/sandbox/service.yaml | kubectl apply -f -'
+                                     sh 'envsubst < deploy/sandbox/deployment.yaml | kubectl apply -f -'
+                                     sh 'envsubst < deploy/sandbox/service.yaml | kubectl apply -f -'
                                  }
                             }
       }
