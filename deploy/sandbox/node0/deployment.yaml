@@ -18,9 +18,9 @@ spec:
       - name: $APP_NAME
         command: [ "/bin/sh","-c","cp -R  /root/.sequencer/$(hostname)/*  /data/blocks/zkevm/demo/;
         if [ $(hostname) = 'zkevm-sequencer-0' ]; then
-           sequencerd start  --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable true --minimum-gas-prices 0.0001aseq  --home /data/blocks/zkevm/demo
+          sequencerd start  --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable true --minimum-gas-prices 0.0001aseq  --home /data/blocks/zkevm/demo
         else
-           sequencerd start  --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable true --minimum-gas-prices 0.0001aseq  --home /data/blocks/zkevm/demo --p2p.seeds 57941156fdf5633c2e7c370f042235b6b387538f@zkevm-sequencer-0.zkevm-sequencer-sandbox.chain-sandbox.svc.cluster.local:26656
+          sequencerd start  --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable true --minimum-gas-prices 0.0001aseq  --home /data/blocks/zkevm/demo --p2p.seeds 57941156fdf5633c2e7c370f042235b6b387538f@zkevm-sequencer-0.zkevm-sequencer-sandbox.chain-sandbox.svc.cluster.local:26656
         fi" ]
         args: [ ""]
         image:  $REGISTRY/$APP_NAME:SNAPSHOT-$BUILD_NUMBER
