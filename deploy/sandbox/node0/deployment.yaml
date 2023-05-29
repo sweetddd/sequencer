@@ -45,6 +45,13 @@ spec:
             value: GMT
       imagePullSecrets:
       - name: regcred
+      volumes:
+      - name: host-time
+        hostPath:
+          path: /etc/localtime
+      - name: data
+        persistentVolumeClaim:
+          claimName: vmchain-ssd-pvc
       restartPolicy: Always
       dnsPolicy: ClusterFirst
       affinity:
