@@ -9,7 +9,7 @@ RUN  apt install apt-transport-https ca-certificates
 
 RUN cp sources.list /etc/apt/sources.list
 RUN apt update
-RUN apt install vim
+RUN apt install vim -y
 #RUN apt-get update
 #RUN  apt install -y apt-transport-https ca-certificates
 #RUN cp sources.list /etc/apt/sources.list
