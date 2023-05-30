@@ -2,13 +2,14 @@ FROM golang:1.20.2
 ENV PACKAGES jq curl wget jq file make git
 
 
+
+WORKDIR /apps
+COPY . .
 RUN  apt install apt-transport-https ca-certificates
 
 RUN cp sources.list /etc/apt/sources.list
 RUN apt update
 RUN apt install vim
-WORKDIR /apps
-COPY . .
 #RUN apt-get update
 #RUN  apt install -y apt-transport-https ca-certificates
 #RUN cp sources.list /etc/apt/sources.list
