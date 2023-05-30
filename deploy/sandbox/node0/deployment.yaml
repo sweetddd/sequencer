@@ -16,7 +16,9 @@ spec:
     spec:
       containers:
       - name: $APP_NAME
-        command: [ "/bin/sh","-c","cp -R  /root/.sequncerd/$(hostname)/*  /data/blocks/zkevm/sequencer/$(hostname);
+        command: [ "/bin/sh","-c",
+          "
+#          cp -R  /root/.sequncerd/$(hostname)/*  /data/blocks/zkevm/sequencer/$(hostname);
         if [ $(hostname) = 'zkevm-sequencer-0' ]; then
           sequencerd start  --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable true --minimum-gas-prices 0.0001aseq  --home /data/blocks/zkevm/sequencer/$(hostname)
         else
