@@ -46,6 +46,10 @@ pipeline {
                                      ]) {
                                      sh 'envsubst < deploy/sandbox/node0/deployment.yaml | kubectl apply -f -'
                                      sh 'envsubst < deploy/sandbox/node0/service.yaml | kubectl apply -f -'
+                                      sh 'envsubst < deploy/sandbox/node1/deployment.yaml | kubectl apply -f -'
+                                      sh 'envsubst < deploy/sandbox/node1/service.yaml | kubectl apply -f -'
+                                       sh 'envsubst < deploy/sandbox/node2/deployment.yaml | kubectl apply -f -'
+                                       sh 'envsubst < deploy/sandbox/node2/service.yaml | kubectl apply -f -'
                                  }
                             }
       }
