@@ -69,7 +69,7 @@
             "account_number": "0",
             "sequence": "0"
           },
-          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+          "code_hash": "0xbf10b41a54fbad5b9520d4b8dda91318eef9a34af904c6331a0108501766dc9c"
         },
         {
           "@type": "/ethermint.types.v1.EthAccount",
