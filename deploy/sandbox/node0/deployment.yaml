@@ -1,27 +1,23 @@
 apiVersion: apps/v1
-kind: StatefulSet
+kind: Deployment
 metadata:
-  name: $APP_NAME
+  name: $APP_NAME-0
   namespace: chain-sandbox
 spec:
-  replicas: 3
-  serviceName: $APP_NAME
+  replicas: 1
+  serviceName: $APP_NAME-0
   selector:
     matchLabels:
-      app: $APP_NAME
+      app: $APP_NAME-0
   template:
     metadata:
       labels:
-        app: $APP_NAME
+        app: $APP_NAME-0
     spec:
       containers:
-      - name: $APP_NAME
-        command: [ "/bin/sh","-c","cp -R  /root/.sequncerd/$(hostname)/*  /data/blocks/zkevm/sequencer/$(hostname);
-        if [ $(hostname) = 'zkevm-sequencer-0' ]; then
-          sequencerd start  --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable true --minimum-gas-prices 0.0001aseq  --home /data/blocks/zkevm/sequencer/$(hostname)
-        else
-          sequencerd start  --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable true --minimum-gas-prices 0.0001aseq  --home /data/blocks/zkevm/sequencer/$(hostname) --p2p.seeds 4d7766a335b0d8344250283e73ce4eb18cb3beb4@zkevm-sequencer-0.zkevm-sequencer.chain-sandbox.svc.cluster.local:26656
-        fi" ]
+      - name: $APP_NAME-0
+        command: [ "/bin/sh","-c","cp -R  /root/.sequncerd/zkevm-sequencer-0/*  /data/blocks/zkevm/sequencer/zkevm-sequencer-0;
+                  sequencerd start  --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable true --minimum-gas-prices 0.0001aseq  --home /data/blocks/zkevm/sequencer/zkevm-sequencer-0" ]
         args: [ ""]
         image:  $REGISTRY/$APP_NAME:SNAPSHOT-$BUILD_NUMBER
         resources:
@@ -62,7 +58,7 @@ spec:
                   - key: app
                     operator: In
                     values:
-                      - $APP_NAME
+                      - $APP_NAME-0
               topologyKey: "kubernetes.io/hostname"
 #  volumeClaimTemplates:
 #    - metadata:
