@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: $APP_NAME-1
+  name: $APP_NAME-2
   namespace: chain-sandbox
 spec:
   ports:
@@ -22,7 +22,7 @@ spec:
     targetPort: 26657
     protocol: TCP
   selector:
-    app: $APP_NAME-1
+    app: $APP_NAME-2
   sessionAffinity: None
 #  type: NodePort
   type: ClusterIP
