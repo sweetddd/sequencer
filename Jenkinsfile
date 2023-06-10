@@ -55,6 +55,27 @@ pipeline {
       }
     }
 
+
+ stage('deploy to production') {
+       steps {
+         input(message: 'Waiting for audit @eric  ', submitter: 'eric,admin')
+         container ('go') {
+                                          withCredentials([
+                                              kubeconfigFile(
+                                              credentialsId: 'kubeconfig-prd',
+                                              variable: 'KUBECONFIG')
+                                              ]) {
+                                              sh 'envsubst < deploy/testnet/node0/deployment.yaml | kubectl apply -f -'
+                                              sh 'envsubst < deploy/testnet/node0/service.yaml | kubectl apply -f -'
+                                               sh 'envsubst < deploy/testnet/node1/deployment.yaml | kubectl apply -f -'
+                                               sh 'envsubst < deploy/testnet/node1/service.yaml | kubectl apply -f -'
+                                                sh 'envsubst < deploy/testnet/node2/deployment.yaml | kubectl apply -f -'
+                                                sh 'envsubst < deploy/testnet/node2/service.yaml | kubectl apply -f -'
+                                          }
+                                     }
+       }
+     }
+
   }
 }
 
