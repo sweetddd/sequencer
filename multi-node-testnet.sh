@@ -23,8 +23,8 @@ jq '.app_state["inflation"]["params"]["mint_denom"]="aseq"' data/testnet/zkevm-s
 
 
 yes 12345678 | sequencerd add-genesis-account testnet0 100000000000000000000000000aseq --keyring-backend os --home data/testnet/zkevm-sequencer-0
-yes 12345678 | sequencerd add-genesis-account testnet1 100000000000000000000000000aseq --keyring-backend os --home data/testnet/zkevm-sequencer-0
-yes 12345678 | sequencerd add-genesis-account testnet2 100000000000000000000000000aseq --keyring-backend os --home data/testnet/zkevm-sequencer-0
+#yes 12345678 | sequencerd add-genesis-account testnet1 100000000000000000000000000aseq --keyring-backend os --home data/testnet/zkevm-sequencer-0
+#yes 12345678 | sequencerd add-genesis-account testnet2 100000000000000000000000000aseq --keyring-backend os --home data/testnet/zkevm-sequencer-0
 yes 12345678 | sequencerd add-genesis-account testnet1 100000000000000000000000000aseq --keyring-backend os --home data/testnet/zkevm-sequencer-1
 yes 12345678 | sequencerd add-genesis-account testnet2 100000000000000000000000000aseq --keyring-backend os --home data/testnet/zkevm-sequencer-2
 
