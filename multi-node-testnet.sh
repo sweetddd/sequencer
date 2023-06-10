@@ -9,6 +9,8 @@ sequencerd init node1 --chain-id testnet_8999-1 --home data/testnet/zkevm-sequen
 sequencerd init node2 --chain-id testnet_8999-1 --home data/testnet/zkevm-sequencer-2
 
 yes 12345678 | sequencerd keys add testnet0  --home data/testnet/zkevm-sequencer-0
+yes 12345678 | sequencerd keys add testnet1  --home data/testnet/zkevm-sequencer-0
+yes 12345678 | sequencerd keys add testnet2  --home data/testnet/zkevm-sequencer-0
 yes 12345678 | sequencerd keys add testnet1  --home data/testnet/zkevm-sequencer-1
 yes 12345678 | sequencerd keys add testnet2  --home data/testnet/zkevm-sequencer-2
 
