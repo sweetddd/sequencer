@@ -1,4 +1,4 @@
-FROM golang:1.20.2
+FROM golang:1.20.7
 ENV PACKAGES jq curl wget jq file make git
 
 
